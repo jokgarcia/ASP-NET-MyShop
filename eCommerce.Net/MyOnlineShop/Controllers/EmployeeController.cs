@@ -31,7 +31,6 @@ namespace MyOnlineShop.Controllers
 
         // POST: Employee/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult CreateEmployee(IFormCollection collection)
         {
             try
@@ -54,7 +53,6 @@ namespace MyOnlineShop.Controllers
 
         // POST: Employee/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult EditEmployee(int id, IFormCollection collection)
         {
             try
@@ -77,7 +75,6 @@ namespace MyOnlineShop.Controllers
 
         // POST: Employee/Delete/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteEmployee(int id, IFormCollection collection)
         {
             try
