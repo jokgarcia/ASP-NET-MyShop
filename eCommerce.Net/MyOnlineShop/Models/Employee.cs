@@ -14,5 +14,6 @@ namespace MyOnlineShop.Models
         public DateTime Birthday { get; set; }
         public string MaritalStatus { get; set; }
 
+
     }
 }
