@@ -7,30 +7,30 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MyOnlineShop.Controllers
 {
-    public class ProductController : Controller
+    public class OrderController : Controller
     {
-        // GET: Product
+        // GET: Order
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Product/Details/5
-        public ActionResult GetProductDetails(int id)
+        // GET: Order/Details/5
+        public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Product/Create
-        public ActionResult CreateProduct()
+        // GET: Order/Create
+        public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Product/Create
+        // POST: Order/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateProduct(IFormCollection collection)
+        public ActionResult Create(IFormCollection collection)
         {
             try
             {
@@ -44,16 +44,16 @@ namespace MyOnlineShop.Controllers
             }
         }
 
-        // GET: Product/Edit/5
-        public ActionResult EditProduct(int id)
+        // GET: Order/Edit/5
+        public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Product/Edit/5
+        // POST: Order/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditProduct(int id, IFormCollection collection)
+        public ActionResult Edit(int id, IFormCollection collection)
         {
             try
             {
@@ -67,16 +67,16 @@ namespace MyOnlineShop.Controllers
             }
         }
 
-        // GET: Product/Delete/5
-        public ActionResult DeleteProduct(int id)
+        // GET: Order/Delete/5
+        public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Product/Delete/5
+        // POST: Order/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteProduct(int id, IFormCollection collection)
+        public ActionResult Delete(int id, IFormCollection collection)
         {
             try
             {

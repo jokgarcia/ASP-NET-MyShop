@@ -9,7 +9,7 @@ namespace MyOnlineShop.Models
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }
-        public string GivenName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
         public DateTime Birthday { get; set; }
