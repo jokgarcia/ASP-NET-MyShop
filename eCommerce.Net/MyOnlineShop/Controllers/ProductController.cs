@@ -16,13 +16,13 @@ namespace MyOnlineShop.Controllers
         }
 
         // GET: Product/Details/5
-        public ActionResult Details(int id)
+        public ActionResult GetProductDetails(int id)
         {
             return View();
         }
 
         // GET: Product/Create
-        public ActionResult Create()
+        public ActionResult CreateProduct()
         {
             return View();
         }
@@ -30,7 +30,7 @@ namespace MyOnlineShop.Controllers
         // POST: Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult CreateProduct(IFormCollection collection)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace MyOnlineShop.Controllers
         }
 
         // GET: Product/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult EditProduct(int id)
         {
             return View();
         }
@@ -53,7 +53,7 @@ namespace MyOnlineShop.Controllers
         // POST: Product/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult EditProduct(int id, IFormCollection collection)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace MyOnlineShop.Controllers
         }
 
         // GET: Product/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult DeleteProduct(int id)
         {
             return View();
         }
@@ -76,7 +76,7 @@ namespace MyOnlineShop.Controllers
         // POST: Product/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult DeleteProduct(int id, IFormCollection collection)
         {
             try
             {
