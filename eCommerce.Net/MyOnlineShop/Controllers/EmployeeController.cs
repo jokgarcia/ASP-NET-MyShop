@@ -12,7 +12,7 @@ namespace MyOnlineShop.Controllers
         // GET: Employee
         public ActionResult Index()
         {
-            //comment
+            
             return View();
 
         }
