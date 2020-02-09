@@ -7,6 +7,7 @@ namespace MyOnlineShop.Models
 {
     public class Employee
     {
+        public int Id { get; set; }
         public int EmployeeId { get; set; }
         public string GivenName { get; set; }
         public string LastName { get; set; }
