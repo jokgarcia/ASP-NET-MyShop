@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/eCommerce.Net/.vs/eCommerce.Net/v16/Server/sqlite3
