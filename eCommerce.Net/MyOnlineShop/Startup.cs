@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using MyOnlineShop.Context;
 using Microsoft.EntityFrameworkCore;
 using MyOnlineShop.DataAccess.Context;
+using MyOnlineShop.DataAccess.Repository;
 
 namespace MyOnlineShop
 {
@@ -29,6 +30,8 @@ namespace MyOnlineShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<OnlineShopContext>(options => options.UseSqlServer(_configuration.GetConnectionString("OnlineShopConnection")));
+            services.AddScoped<IOnlineShopRepository, OnlineShopRepository>();
+
             services.AddRazorPages();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
@@ -46,13 +49,13 @@ namespace MyOnlineShop
 
             app.UseMvc(ConfigureRoutes);
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello World!");
+            //    });
+            //});
 
             //Seeder.Initialize(context);
         }
