@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyOnlineShop.Context;
 using Microsoft.EntityFrameworkCore;
+using MyOnlineShop.DataAccess.Context;
 
 namespace MyOnlineShop
 {
@@ -53,7 +54,7 @@ namespace MyOnlineShop
                 });
             });
 
-            Seeder.Initialize(context);
+            //Seeder.Initialize(context);
         }
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)

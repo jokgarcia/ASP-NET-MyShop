@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyOnlineShop.Models;
+using MyOnlineShop.DataAccess.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace MyOnlineShop.Context
+namespace MyOnlineShop.DataAccess.Context
 {
     public class OnlineShopContext : DbContext
     {
@@ -18,3 +17,4 @@ namespace MyOnlineShop.Context
         public DbSet<Customer> Customers { get; set; }
     }
 }
+
