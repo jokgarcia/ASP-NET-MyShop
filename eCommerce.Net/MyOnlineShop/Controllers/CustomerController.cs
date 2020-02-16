@@ -4,15 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyOnlineShop.DataAccess.Models;
+using MyOnlineShop.DataAccess.Repository;
 
 namespace MyOnlineShop.Controllers
 {
     public class CustomerController : Controller
     {
+        IOnlineShopRepository onlineShopRepository;
+        public CustomerController(IOnlineShopRepository _onlineShopRepository) 
+        {
+            onlineShopRepository = _onlineShopRepository;
+        }
         // GET: Customer
         public ActionResult Index()
         {
-            return View();
+          var customer = onlineShopRepository.GetCustomers();
+          return View(customer);
         }
 
         // GET: Customer/Details/5

@@ -1,4 +1,6 @@
-﻿using MyOnlineShop.Models;
+﻿using MyOnlineShop.DataAccess.Context;
+using MyOnlineShop.DataAccess.Models;
+using MyOnlineShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
