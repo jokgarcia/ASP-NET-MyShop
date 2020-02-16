@@ -57,7 +57,7 @@ namespace MyOnlineShop
             //    });
             //});
 
-            //Seeder.Initialize(context);
+            Seeder.Initialize(context);
         }
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)
