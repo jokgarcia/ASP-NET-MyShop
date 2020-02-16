@@ -12,6 +12,11 @@ namespace MyOnlineShop.DataAccess.Repository
     {
         OnlineShopContext context;
 
+        public OnlineShopRepository()
+        {
+
+        }
+
         //Constructor
         public OnlineShopRepository(OnlineShopContext _context)
         {

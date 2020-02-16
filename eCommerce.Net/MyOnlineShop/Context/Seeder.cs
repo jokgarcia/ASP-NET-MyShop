@@ -17,10 +17,24 @@ namespace MyOnlineShop.Context
             var customer = new Customer() 
             {
                 FirstName = "Jok",
-                LastName = "Garcia"
+                LastName = "Garcia",
+                Email = "jok@email.com",
+                ContactNumber = "888777",
+                IsActive = true
             };
 
             context.Customers.Add(customer);
+            context.SaveChanges();
+
+            var customer2 = new Customer()
+            {
+                FirstName = "Lebron",
+                LastName = "James",
+                Email = "lbj@email.com",
+                ContactNumber = "31231231",
+            };
+
+            context.Customers.Add(customer2);
             context.SaveChanges();
         }
     }
