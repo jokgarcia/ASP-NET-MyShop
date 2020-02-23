@@ -1,0 +1,47 @@
+﻿@model MyOnlineShop.DataAccess.Models.Customer
+
+@if (Model.IsActive == false)
+{
+    <tr class="danger">
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td>@Model.Email</td>
+        <td>@Model.ContactNumber</td>
+        <td>Inactive</td>
+        <td>
+            <a asp-action="Edit" 
+               asp-route-Id="@Model.Id" 
+               asp-route-FirstName="@Model.FirstName"
+               asp-route-LastName="@Model.LastName"
+               asp-route-Email="@Model.Email"
+               asp-route-ContactNumber="@Model.ContactNumber">
+                Edit
+            </a>
+        </td>
+    </tr>
+}
+else
+{
+    <tr class="success">
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td>@Model.Email</td>
+        <td>@Model.ContactNumber</td>
+        <td>Active</td>
+        <td>
+            <a asp-action="Edit"
+               asp-route-Id="@Model.Id"
+               asp-route-FirstName="@Model.FirstName"
+               asp-route-LastName="@Model.LastName"
+               asp-route-Email="@Model.Email"
+               asp-route-ContactNumber="@Model.ContactNumber">
+                Edit
+            </a>
+        </td>
+    </tr>
+}
+
+
+
+
+

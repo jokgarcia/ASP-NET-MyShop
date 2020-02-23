@@ -1,4 +1,6 @@
-﻿using MyOnlineShop.Models;
+﻿using MyOnlineShop.DataAccess.Context;
+using MyOnlineShop.DataAccess.Models;
+using MyOnlineShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +17,24 @@ namespace MyOnlineShop.Context
             var customer = new Customer() 
             {
                 FirstName = "Jok",
-                LastName = "Garcia"
+                LastName = "Garcia",
+                Email = "jok@email.com",
+                ContactNumber = "888777",
+                IsActive = true
             };
 
             context.Customers.Add(customer);
+            context.SaveChanges();
+
+            var customer2 = new Customer()
+            {
+                FirstName = "Lebron",
+                LastName = "James",
+                Email = "lbj@email.com",
+                ContactNumber = "31231231",
+            };
+
+            context.Customers.Add(customer2);
             context.SaveChanges();
         }
     }

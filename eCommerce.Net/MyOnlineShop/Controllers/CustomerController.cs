@@ -4,15 +4,29 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyOnlineShop.DataAccess.Models;
+using MyOnlineShop.DataAccess.Repository;
+using MyOnlineShop.DataAccess.ViewModels;
 
 namespace MyOnlineShop.Controllers
 {
     public class CustomerController : Controller
     {
+        IOnlineShopRepository onlineShopRepository;
+        public CustomerController(IOnlineShopRepository _onlineShopRepository) 
+        {
+            onlineShopRepository = _onlineShopRepository;
+        }
         // GET: Customer
         public ActionResult Index()
         {
-            return View();
+            var viewModel = new CustomerViewModel();
+
+            var customers = onlineShopRepository.GetCustomers();
+
+            viewModel.Customers = customers;
+
+          return View(viewModel);
         }
 
         // GET: Customer/Details/5
@@ -29,12 +43,17 @@ namespace MyOnlineShop.Controllers
 
         // POST: Customer/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        //[Route("AddCustomer/{Customer}")]
+        public IActionResult Create(Customer customer)
         {
             try
             {
                 // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    customer.IsActive = true;
+                    onlineShopRepository.AddCustomer(customer);
+                }
 
                 return RedirectToAction(nameof(Index));
             }
@@ -45,20 +64,29 @@ namespace MyOnlineShop.Controllers
         }
 
         // GET: Customer/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int Id, string FirstName, string LastName, string Email, string ContactNumber)
         {
+            ViewData["Id"] = Id;
+            ViewData["FirstName"] = FirstName;
+            ViewData["LastName"] = LastName;
+            ViewData["Email"] = Email;
+            ViewData["ContactNumber"] = ContactNumber;
+
             return View();
         }
 
         // POST: Customer/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public IActionResult Edit(Customer customer)
         {
             try
             {
-                // TODO: Add update logic here
-
+                if (ModelState.IsValid)
+                {
+                    customer.IsActive = true;
+                    onlineShopRepository.UpdateCustomer(customer);
+                }
+                
                 return RedirectToAction(nameof(Index));
             }
             catch
