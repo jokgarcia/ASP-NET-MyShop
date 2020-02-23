@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyShop.WebUI.Models
 {
+    //ViewModel
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
