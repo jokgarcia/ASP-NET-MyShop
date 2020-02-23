@@ -18,5 +18,6 @@ namespace MyShop.DataAccess.SQL
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
 
+        public DbSet<Supplier> Suppliers { get; set; }
     }
 }
