@@ -320,6 +320,10 @@
     <Content Include="Views\OrderManager\Index.cshtml" />
     <Content Include="Views\OrderManager\UpdateOrder.cshtml" />
     <Content Include="Views\OrderManager\OrderItems.cshtml" />
+    <Content Include="Views\Supplier\Index.cshtml" />
+    <Content Include="Views\Supplier\Create.cshtml" />
+    <Content Include="Views\Supplier\Edit.cshtml" />
+    <Content Include="Views\Supplier\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
