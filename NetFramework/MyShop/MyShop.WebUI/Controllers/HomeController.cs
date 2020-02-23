@@ -18,6 +18,7 @@ namespace MyShop.WebUI.Controllers
             this.productCategories = productCategoryContext;
         }
 
+        [Authorize]
         public ActionResult Admin() {
             return View();
         }
