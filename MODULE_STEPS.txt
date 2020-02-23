@@ -1,0 +1,35 @@
+Steps
+- For Reference Check "ProductCategoryManager"
+1.) Create Model - Add Model to DbSet
+2.) Register Class to App_Start/UnityConfig
+2.) Create SQL Table / 
+    Entity Framewokr Migration
+    1.) Delete Database
+	2.) Delete "Migrations" Folder in your Project
+	2.) nuget package console
+	3.) type -> Enable-Migrations
+	4.) type -> Add-Migration Initial
+	5.) type -> Update-Database
+	* if there are new changes repeat step 4 and 5
+	
+3.) Add Controller
+4.) Add Actions
+    
+    HttpGet - Index
+	
+	HttpGet - Create
+	HttpPost - Create
+	
+	HttpGet - Edit
+	HttpPost - Edit
+	
+	HttpGet - Delete
+	HttpPost - ConfirmDelete
+
+5.) Add View for each action
+    - you must first declare your model above the page
+	  e.g 
+	  @model IEnumerable<MyShop.Core.Models.ProductCategory>
+	  @model MyShop.Core.Models.ProductCategory
+    
+
