@@ -1,17 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MyOnlineShop.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MyShop.Core.Models;
+using System.Data.Entity;
 
-namespace MyOnlineShop.Context
+namespace MyShop.DataAccess.SQL
 {
-    public class OnlineShopContext : DbContext
+    public class DataContext : DbContext
     {
-        //COntstructor
-        public OnlineShopContext(DbContextOptions options) : base(options)
-        {
+        public DataContext()
+            : base("DefaultConnection") {
 
         }
 
@@ -22,5 +17,6 @@ namespace MyOnlineShop.Context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+
     }
 }
