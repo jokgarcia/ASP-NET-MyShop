@@ -45,6 +45,7 @@
     <Compile Include="Contracts\IBasketService.cs" />
     <Compile Include="Contracts\IOrderService.cs" />
     <Compile Include="Contracts\IRepository.cs" />
+    <Compile Include="Models\Area.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Basket.cs" />
     <Compile Include="Models\BasketItem.cs" />

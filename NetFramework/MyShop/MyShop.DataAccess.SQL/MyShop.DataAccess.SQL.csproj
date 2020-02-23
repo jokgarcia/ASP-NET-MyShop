@@ -68,10 +68,5 @@
       <Name>MyShop.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002230905288_InitialDatabase.resx">
-      <DependentUpon>202002230905288_InitialDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
